@@ -1,0 +1,43 @@
+<!--
+    1. create section for score card
+        -add styles for black background
+        -add paragraph element
+            -add styles for 'red' text 'roboto' font
+    2. create section for controls x2 for Home & Guest
+        -add a section with three button elements
+            -add styles to arrange horizontally
+            -add styles for 'white' border and text
+    3. add handleClick function for each control x2 for Home & Guest
+-->
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="home-content">
+                <h3>HOME</h3>
+                <div class="score-card">
+                    <p id="home-score-text"></p>
+                </div>
+                <div id="home-score-controls">
+                    <button id="add-one-home-btn">+1</button>
+                    <button id="add-two-home-btn">+2</button>
+                    <button id="add-three-home-btn">+3</button>
+                </div>
+            </div>
+            <div id="guest-content">
+                <h3>GUEST</h3>
+                <div class="score-card">
+                    <p id="guest-score-text"></p>
+                </div>
+                <div id="guest-score-controls">
+                    <button id="add-one-guest-btn">+1</button>
+                    <button id="add-two-guest-btn">+2</button>
+                    <button id="add-three-guest-btn">+3</button>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
