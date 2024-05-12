@@ -1,4 +1,4 @@
-//create a function that handles clicks from both home and guest
+//create a function that handles clicks from both home and Away
 /**
  * 1. add click listerners to all buttons and add ids to all buttons
  * 2. depending on the button clicked, call function and pass argument
@@ -8,48 +8,48 @@ let [
     addOneHomeButton,
     addTwoHomeButton,
     addThreeHomeButton,
-    addOneGuestButton,
-    addTwoGuestButton,
-    addThreeGuestButton
+    addOneAwayButton,
+    addTwoAwayButton,
+    addThreeAwayButton
 ] = [
         document.getElementById("add-one-home-btn"),
         document.getElementById("add-two-home-btn"),
         document.getElementById("add-three-home-btn"),
-        document.getElementById("add-one-guest-btn"),
-        document.getElementById("add-two-guest-btn"),
-        document.getElementById("add-three-guest-btn")
-]
-        
-let [homeScore, guestScore] = [0, 0]
+        document.getElementById("add-one-away-btn"),
+        document.getElementById("add-two-away-btn"),
+        document.getElementById("add-three-away-btn")
+    ]
+
+let [homeScore, awayScore] = [0, 0]
 
 let homeScoreText = document.getElementById("home-score-text")
-let guestScoreText = document.getElementById("guest-score-text")
+let awayScoreText = document.getElementById("away-score-text")
 
 homeScoreText.textContent = 0
-guestScoreText.textContent = 0
+awayScoreText.textContent = 0
 
-addOneHomeButton.addEventListener("click", () => {handleClick(addOneHomeButton.id)})
-addTwoHomeButton.addEventListener("click", () => {handleClick(addTwoHomeButton.id)})
-addThreeHomeButton.addEventListener("click", () => {handleClick(addThreeHomeButton.id)})
-addOneGuestButton.addEventListener("click", () => {handleClick(addOneGuestButton.id)})
-addTwoGuestButton.addEventListener("click", () => {handleClick(addTwoGuestButton.id)})
-addThreeGuestButton.addEventListener("click", () => {handleClick(addThreeGuestButton.id)})
+addOneHomeButton.addEventListener("click", () => { handleClick(addOneHomeButton.id) })
+addTwoHomeButton.addEventListener("click", () => { handleClick(addTwoHomeButton.id) })
+addThreeHomeButton.addEventListener("click", () => { handleClick(addThreeHomeButton.id) })
+addOneAwayButton.addEventListener("click", () => { handleClick(addOneAwayButton.id) })
+addTwoAwayButton.addEventListener("click", () => { handleClick(addTwoAwayButton.id) })
+addThreeAwayButton.addEventListener("click", () => { handleClick(addThreeAwayButton.id) })
 
-function handleClick(id){
-    switch (id){
-        case addOneGuestButton.id:
-            guestScore += 1
-            updateGuestScore(guestScore)
+function handleClick(id) {
+    switch (id) {
+        case addOneAwayButton.id:
+            awayScore += 1
+            updateAwayScore(awayScore)
             break
-        case addTwoGuestButton.id:
-            guestScore += 2
-            updateGuestScore(guestScore)
+        case addTwoAwayButton.id:
+            awayScore += 2
+            updateAwayScore(awayScore)
             break
-        case addThreeGuestButton.id:
-            guestScore += 3
-            updateGuestScore(guestScore)
+        case addThreeAwayButton.id:
+            awayScore += 3
+            updateAwayScore(awayScore)
             break
-        case addOneHomeButton.id: 
+        case addOneHomeButton.id:
             homeScore += 1
             updateHomeScore(homeScore)
             break
@@ -64,10 +64,10 @@ function handleClick(id){
     }
 }
 
-function updateGuestScore(score){
-    guestScoreText.textContent = score
+function updateAwayScore(score) {
+    awayScoreText.textContent = score
 }
 
-function updateHomeScore(score){
+function updateHomeScore(score) {
     homeScoreText.textContent = score
 }
